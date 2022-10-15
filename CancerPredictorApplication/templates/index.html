@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<style>
+    body {
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+  }
+  .container-fluid{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #FFF;
+  }
+  /* ============= Animation background ========= */
+  .background {
+    background: linear-gradient(132deg, #FC415A, #845acd, #33354a);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    height: 150vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
+  }
+  .cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #D7D4E4;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 12s ease-in forwards infinite;
+  }
+  .cube:nth-child(2n) {
+    border-color: #FFF ;
+  }
+  .cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+  }
+  .cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+  .cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  .cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+  /* ================= Header ============ */
+  header{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* navbar */
+  nav{
+    color: #FFF;
+    float: right;
+    margin:30px 90px;
+  }
+  nav ul{
+    list-style: none;
+  }
+  nav ul li {
+    float: left;
+    transition: .3s;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: #EFEEF5;
+    transition: .5;
+    font-size: 15px;
+    margin-left:16px;
+  }
+  nav ul li:hover a{
+    text-decoration: none;
+    color: #591BC5;;
+  }
+  nav ul li:hover{
+    height: 45px;
+    padding-top: 30px;
+    margin-top: -30px;
+   background: #EFEEF5;
+    text-decoration: none;
+    transform: skew(15deg);
+  }
+  /* Logo */
+  .logo{
+    width: 35px;
+    height: 35px;
+    background: #EFEEF5;
+    margin: 40px 63px;
+    float: left;
+    transform: rotate(-30deg);
+  }
+  .logo span{
+    color: #591BC5;
+    font-size: 2em;
+    line-height: 1.4;
+    padding-left: 5px;
+    font-weight: bold;
+  }
+  /* Header content & title & button*/
+  .header-content{
+    margin-top:25%;
+    text-align: center;
+    color:  #EFEEF5;
+  }
+  .header-content h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 1px;
+  }
+  .header-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px auto;
+  }
+  .header-content button{
+    width: 140px;
+    margin:20px 10px;
+    color: #591BC5;
+    font-size: 17px;
+    border:1px solid #EFEEF5;
+    font-weight: 500;
+    background: #EFEEF5;
+    border-radius: 20px;
+    padding: 10px;
+    cursor:pointer;
+    transition: .3s;
+  }
+  .header-content button:hover{
+    border-radius: 0;
+  }
+  /* Animate Background*/
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+
+<!-- Background & animion & navbar & title -->
+  <div class="container-fluid">
+<!-- Background animtion-->
+    <div class="background">
+       <div class="cube"></div>
+       <div class="cube"></div>
+       <div class="cube"></div>
+       <div class="cube"></div>
+      <div class="cube"></div>
+     
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		breast cancer Predictor
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+            font-family: Verdana;
+			 color: #28282a;
+             text-align: center;
+			
+           
+			
+		}
+        h1 {
+            font-family: Verdana;
+            color: #e4e4eb;
+            text-align: center;
+            
+        }
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: rgba(255, 255, 255, 0.521);
+			max-width: 600px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #6ae9a3c3;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+        .alert-danger{
+            font-family: verdana;
+            color:rgb(52, 50, 50)
+
+        }
+         .alert-success{
+            font-family:  Verdana;
+            color:rgb(76, 197, 76)
+        }
+	</style>
+</head>
+
+<body>
+	<h1>Breast Cancer Predictor</h1>
+    
+    <div class="jumbotron">
+        {% if p %}
+            <div class="alert-danger">{{p}}</div>
+        {% endif %}
+        {% if s %}
+            <div class=" alert-success">{{s}}</div>
+        {% endif %}
+
+        
+        <form class="form-group" action="/" method="POST">
+          <div class="form-control">
+             <label for="age">Age : </label>
+             <input type="number" name="age" class="form-control">
+          </div>
+          <div class="form-control">
+             <label for="bmi">BMI : </label>
+             <input type="number" name="bmi" class="form-control">
+          </div>
+          <div class="form-control">
+              <label for="glucose">Glucose : </label>
+              <input type="number" name="glucose" class="form-control">
+          </div>
+          <div class="form-control">
+              <label for="insulin">Insulin : </label>
+              <input type="number" name="insulin" class="form-control">
+          </div>
+          <div class="form-control">
+              <label for="homa">HOMA : </label>
+              <input type="number" name="homa" class="form-control">
+          </div>
+          <div class="form-control">
+              <label for="Leptin">Leptin : </label>
+              <input type="number" name="Leptin" class="form-control">
+          </div>
+          <div class="form-control">
+              <label for="Adiponectin">Adiponectin : </label>
+              <input type="number" name="Adiponectin" class="form-control">
+          </div>
+          <div class="form-control">
+              <label for="Resistin">Resistin : </label>
+              <input type="number" name="Resistin" class="form-control">
+          </div>
+          <div class="form-control">
+             <label for="mcp1">MCP-1 : </label>
+             <input type="number" name="mcp1" class="form-control">
+          </div>
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </form>
+        
+
+        
+
+		
+    </div
+</body>
+
+
+
+    </div>
+<!-- header -->
+   
+
+</html>
+
